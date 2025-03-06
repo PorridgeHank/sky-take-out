@@ -5,6 +5,6 @@
 <insert id="insert" useGeneratedKeys="true" keyProperty="id">
     insert into dish (name, category_id, price, image, description, create_time, update_time, create_user, update_user,status)
         values
-    (#{name},#{categoryId},#{price},#{image},#{description},#{categoryId},#{updateTime},#{categoryId},#{updateUser},#{status})
+    (#{name},#{categoryId},#{price},#{image},#{description},#{createTime},#{updateTime},#{categoryId},#{updateUser},#{status})
 </insert>
 </mapper>
