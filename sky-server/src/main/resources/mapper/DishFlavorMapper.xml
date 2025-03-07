@@ -6,7 +6,7 @@
     insert into dish_flavor (dish_id, name, value)
         values
     <foreach collection="flavors" item="df" separator=",">
-        (#{df.dish_id},#{df.name},#{df.value})
+        (#{df.dishId},#{df.name},#{df.value})
     </foreach>
 
 </insert>

@@ -25,6 +25,10 @@ public class MinioUtil {
      * 带参构造方法（推荐Spring注入使用）
      */
     public MinioUtil(String endpoint, String accessKey, String secretKey, String bucketName) {
+        // 去除 endpoint 末尾可能存在的斜杠
+        if (endpoint.endsWith("/")) {
+            endpoint = endpoint.substring(0, endpoint.length() - 1);
+        }
         // 必须将参数赋值给成员变量
         this.endpoint = endpoint;  // 关键赋值操作
 
