@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class MinioConfiguration {
     @Bean
     @ConditionalOnMissingBean
-    public MinioUtil aliOssUtil(MinioProperties minioProperties){
+    public MinioUtil minioUtil(MinioProperties minioProperties){
         log.info("开始创建阿里云服务器Minio上传工具类对象：{}", minioProperties);
         return new MinioUtil(minioProperties.getEndpoint(),
                 minioProperties.getAccessKey(),
