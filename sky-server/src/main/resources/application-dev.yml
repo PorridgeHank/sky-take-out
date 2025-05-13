@@ -12,8 +12,11 @@ sky:
     username: root
     password: zhouhan123
   redis:
-    host: 127.0.0.1
+    host: 47.92.138.20
     port: 6379
 #    password: 123456
     database: 10
+  wechat:
+    appid: wxdf392e07cf727b11
+    secret: c9e614721e8333268bfe6b7642da7a74
 
