@@ -41,12 +41,15 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
      */
     protected void addInterceptors(InterceptorRegistry registry) {
         log.info("开始注册自定义拦截器...");
+        //注册PC端管理台用户操作请求拦截器配置
         registry.addInterceptor(jwtTokenAdminInterceptor)
                 .addPathPatterns("/admin/**")
                 .excludePathPatterns("/admin/employee/login");
+        //注册微信小程序用户操作请求拦截器配置
         registry.addInterceptor(jwtTokenUserInterceptor)
-                .addPathPatterns("/user/user/login")
-                .excludePathPatterns("/user/shop/status");
+                .addPathPatterns("/user/**")
+                .excludePathPatterns("/user/user/login")
+                .excludePathPatterns("/user/shop/status");//查询商家营业状态在登录之前就开始
     }
 
     /**
