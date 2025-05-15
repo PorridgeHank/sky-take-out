@@ -53,7 +53,7 @@ public interface DishMapper {
     void deleteById(Long id);
 
     /**
-     * 根据id动他修改菜品数据
+     * 根据id动态修改菜品数据
      * @param dish
      */
     @AutoFill(value = OperationType.UPDATE)
