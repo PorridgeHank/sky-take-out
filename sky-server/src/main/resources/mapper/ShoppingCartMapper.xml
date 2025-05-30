@@ -20,4 +20,6 @@
         </where>
         order by create_time desc
     </select>
+
+    <delete id="cleanShoppingCart"></delete>
 </mapper>
