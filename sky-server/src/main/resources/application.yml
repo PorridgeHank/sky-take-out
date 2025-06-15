@@ -37,7 +37,6 @@ logging:
         mapper: debug
         service: info
         controller: info
-
 sky:
   minio:
     endpoint: ${sky.minio.endpoint}

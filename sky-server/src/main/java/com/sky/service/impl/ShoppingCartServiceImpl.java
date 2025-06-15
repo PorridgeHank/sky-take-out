@@ -53,7 +53,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService{
                 shoppingCart.setAmount(dish.getPrice());
             }else {
                 //判断商品为套餐
-                //拿前端dto中的setmeal_id从套餐表中查出对应套餐数据，并添加到购物车
+                //拿前端表单提交参数封装dto中的setmeal_id从套餐表中查出对应套餐数据，并添加到购物车
                 Setmeal setmeal = setmealMapper.getById(shoppingCartDTO.getSetmealId());
                 shoppingCart.setName(setmeal.getName());
                 shoppingCart.setImage(setmeal.getImage());
